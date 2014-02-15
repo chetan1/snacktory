@@ -37,6 +37,8 @@ public class JResult implements Serializable {
     private String text;
     private String faviconUrl;
     private String description;
+	private String authorName;
+	private String authorDescription;
     private String dateString;
     private Collection<String> keywords;
     private List<ImageResult> images = null;
@@ -105,6 +107,29 @@ public class JResult implements Serializable {
         this.description = description;
         return this;
     }
+	
+
+    public String getAuthorName() {
+        if (authorName == null)
+            return "";
+        return authorName;
+    }
+
+    public JResult setAuthorName(String authorName) {
+        this.authorName = authorName;
+        return this;
+    }	
+	
+    public String getAuthorDescription() {
+        if (authorDescription == null)
+            return "";
+        return authorDescription;
+    }
+
+    public JResult setAuthorDescription(String authorDescription) {
+        this.authorDescription = authorDescription;
+        return this;
+    }		
 
     public String getImageUrl() {
         if (imageUrl == null)
